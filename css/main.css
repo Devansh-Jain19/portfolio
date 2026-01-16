@@ -1,0 +1,23 @@
+@import "./components/navbar.css";
+@import "./components/buttons.css";
+@import "./base/typography.css";
+@import "./pages/home.css";
+
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --bg-main: #0f172a;        
+    --bg-secondary: #111827;  
+    
+    --text-main: #e5e7eb;     
+    --text-muted: #9ca3af;
+  
+    --accent: #3b82f6;        
+    --border-color: #1f2937;
+  }
+  
+
