@@ -16,6 +16,7 @@
     font-size:3.2rem;
     font-weight:700;
     color : var(--text-main);
+    letter-spacing: -1px;
 }
 
 .hero-subtitle{
@@ -29,6 +30,10 @@
     display:flex;
     justify-content:center;
     gap:1.5rem;
+}
+
+.accent-dot{
+    color:var(--accent);
 }
 
 .about{
@@ -46,6 +51,18 @@
 
 .section-title{
     color:var(--text-main);
+    position:relative;
+    display:inline-block;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:40%;
+    height:2px;
+    background:var(--accent) ;
+    margin:0.5rem auto 0;
+
 }
 
 .about-text{
@@ -85,7 +102,13 @@
     color:var(--text-main);
     font-weight: 600;
     border-radius: 0.5rem;
-    border:2px solid var(--border-color)
+    border:2px solid var(--border-color);
+    transition: transform 0.2s ease , border-color 0.2s ease;
+}
+
+.skills-card:hover{
+    transform: translateY(-4px);
+    border-color:var(--accent);
 }
 
 .project{
@@ -101,10 +124,8 @@
     margin:0 auto;
 }
 
-.section-title{
-    font-weight:700;
-    color:var(--text-main);    
-}
+
+
 
 .project-grid{
     margin:3rem;
@@ -120,6 +141,11 @@
     flex-direction:column;
     border:2px solid var(--border-color);
     border-radius:0.5rem;
+    transition:transform 0.25s ease , box-shadow 0.25s ease;
+}
+.project-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .project-title{
