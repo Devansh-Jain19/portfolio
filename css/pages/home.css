@@ -37,12 +37,14 @@
 }
 
 .about{
-    padding:6rem 1.5rem;
     background-color:var(--bg-main);
     border-top:1px solid var(--border-color);
     text-align:center;
 }
 
+.section{
+    scroll-margin-top:80px;
+}
 
 .about-container{
     max-width:800px;
@@ -58,11 +60,16 @@
 .section-title::after{
     content:"";
     display:block;
-    width:40%;
+    width:0;
     height:2px;
     background:var(--accent) ;
     margin:0.5rem auto 0;
+    transition: width 0.6s ease;
 
+}
+
+.section-title.animate::after{
+    width:40%;
 }
 
 .about-text{
@@ -71,7 +78,6 @@
 }
 
 .skills{
-    padding:6rem 1.5rem;
     background-color:var(--bg-secondary);
     text-align:center;
     border-top:1px solid var(--border-color);
@@ -112,7 +118,6 @@
 }
 
 .project{
-    padding:6rem 1.5rem;
     background-color:var(--bg-main);
     color:var(--text-main);
     text-align:center;
@@ -173,7 +178,6 @@
 }
 
 .contact{
-    padding:6rem 1.5rem;
     background-color: var(--bg-main);
     color:var(--text-main);
     text-align:center;
@@ -204,12 +208,64 @@
     font-weight:500;
 }
 
+.about,.skills,.project,.contact{
+    padding: 6rem 1.5rem;
+}
+
 .footer{
     background-color: var(--bg-main);
     padding:2rem 1.5rem;
     text-align:center;
     color:var(--text-main);
     border-top: 1px solid var(--border-color);
+}
+
+p{
+    line-height:1.7;
+}
+
+.hero-content,.about-text,.project-desc,.contact-desc{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.project-link,.contact-link{
+    transition: color 0.2s ease;
+}
+
+.project-link:hover,.contact-link:hover{
+    color:rosybrown;
+}
+
+#scrolltopbtn{
+    position:fixed;
+    bottom:2rem;
+    right:2rem;
+
+    width:44px;
+    height:44px;
+
+    border-radius: 50%;
+    border:1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+
+    font-size:1.2rem;
+    cursor:pointer;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+
+}
+
+#scrolltopbtn:hover{
+    color:var(--accent);
+    border-color: var(--accent);
 }
 
 @media(max-width:768px){
